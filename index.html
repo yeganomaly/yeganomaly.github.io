@@ -446,7 +446,7 @@ section[id] { scroll-margin-top: calc(var(--bar-h) + 8px); }
 .svc-intro { font-family: var(--f-serif); font-style: italic; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.2; max-width: 30ch; margin: -18px 0 clamp(40px, 5vw, 60px); color: rgba(241,233,218,.88); }
 .ads { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: clamp(20px, 2.6vw, 30px); }
 .ad {
-  grid-column: span 6; position: relative; display: flex; flex-direction: column; gap: 14px; min-width: 0;
+  grid-column: span 4; position: relative; display: flex; flex-direction: column; gap: 14px; min-width: 0;
   padding: clamp(24px, 3vw, 36px);
   border: 2px solid rgba(241,233,218,.8); outline: 1px solid rgba(241,233,218,.35); outline-offset: 5px;
   cursor: default;
@@ -457,7 +457,7 @@ section[id] { scroll-margin-top: calc(var(--bar-h) + 8px); }
 .ad-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .ad-no { font-family: var(--f-display); font-weight: 900; font-size: 30px; line-height: 1; color: var(--red); }
 .ad .stamp { color: var(--red); background: var(--ink); transform: rotate(6deg); font-size: 12px; }
-.ad h3 { font-family: var(--f-display); font-weight: 900; text-transform: uppercase; font-size: clamp(30px, 3vw, 44px); line-height: .95; margin-top: 14px; }
+.ad h3 { font-family: var(--f-display); font-weight: 900; text-transform: uppercase; font-size: clamp(30px, 2.7vw, 40px); line-height: .95; margin-top: 14px; }
 .ad.lead h3 { font-size: clamp(40px, 4.8vw, 66px); }
 .ad-pitch { margin-top: 12px; color: rgba(241,233,218,.86); max-width: 50ch; }
 .ad-for { margin-top: 14px; color: rgba(241,233,218,.6); }
@@ -475,6 +475,10 @@ section[id] { scroll-margin-top: calc(var(--bar-h) + 8px); }
 }
 .svc-note { margin-top: clamp(34px, 4vw, 50px); color: rgba(241,233,218,.7); }
 .svc-note a { color: var(--paper); text-decoration-color: var(--red); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+@media (max-width: 1140px) {
+  .ad { grid-column: span 6; }
+  .ad:last-child { grid-column: 1 / -1; }
+}
 @media (max-width: 860px) {
   .ad, .ad.lead { grid-column: 1 / -1; }
   .ad.lead { display: flex; }
@@ -697,7 +701,7 @@ section[id] { scroll-margin-top: calc(var(--bar-h) + 8px); }
       <h2 id="services-h">work <span class="serif-i">with me</span></h2>
     </header>
     <div class="svc-head">
-      <p class="svc-intro">Where crypto, AI agents and design overlap. Three offers, opening one at a time.</p>
+      <p class="svc-intro">Where crypto, AI agents and design overlap. Four offers, opening one at a time.</p>
       <span class="note n-svc" aria-hidden="true">the one i'm most<br>excited about<svg viewBox="0 0 60 70" width="60" height="70"><path d="M10 4 C 30 14, 40 34, 30 62"/><path d="M20 54 L 30 64 L 40 53"/></svg></span>
     </div>
 
@@ -720,7 +724,21 @@ section[id] { scroll-margin-top: calc(var(--bar-h) + 8px); }
 
       <article class="ad" aria-labelledby="ad-2">
         <div class="ad-top"><span class="ad-no" aria-hidden="true">02</span><span class="stamp">soon</span></div>
-        <h3 id="ad-2">Research Agent Setup</h3>
+        <h3 id="ad-2">Creator Collabs</h3>
+        <p class="ad-pitch">I try your project for real, then explain it in my own voice: threads, short videos and posts for people who actually build and trade onchain.</p>
+        <ul class="ad-list" aria-label="What you get">
+          <li>X thread or deep-dive post on your product</li>
+          <li>Short video for TikTok, Reels or YouTube Shorts</li>
+          <li>Launch &amp; update coverage across my channels</li>
+          <li>Only projects I'd use myself, always marked as sponsored</li>
+        </ul>
+        <p class="ad-for mono">for web3 &amp; AI projects with something real to show</p>
+        <div class="ad-foot"><span class="ad-cta" aria-disabled="true">opening soon</span></div>
+      </article>
+
+      <article class="ad" aria-labelledby="ad-3">
+        <div class="ad-top"><span class="ad-no" aria-hidden="true">03</span><span class="stamp">soon</span></div>
+        <h3 id="ad-3">Research Agent Setup</h3>
         <p class="ad-pitch">An always-on AI research agent that watches the market for you and drops a daily brief in your Telegram.</p>
         <ul class="ad-list" aria-label="What you get">
           <li>Daily market + CT brief tuned to your watchlist</li>
@@ -731,9 +749,9 @@ section[id] { scroll-margin-top: calc(var(--bar-h) + 8px); }
         <div class="ad-foot"><span class="ad-cta" aria-disabled="true">opening soon</span></div>
       </article>
 
-      <article class="ad" aria-labelledby="ad-3">
-        <div class="ad-top"><span class="ad-no" aria-hidden="true">03</span><span class="stamp">soon</span></div>
-        <h3 id="ad-3">Editorial Launch Visuals</h3>
+      <article class="ad" aria-labelledby="ad-4">
+        <div class="ad-top"><span class="ad-no" aria-hidden="true">04</span><span class="stamp">soon</span></div>
+        <h3 id="ad-4">Editorial Launch Visuals</h3>
         <p class="ad-pitch">Noisy, editorial motion and visuals for launches, TGEs and big updates. Built to stop the scroll, not blend into the feed.</p>
         <ul class="ad-list" aria-label="What you get">
           <li>Launch teaser + announcement motion</li>
